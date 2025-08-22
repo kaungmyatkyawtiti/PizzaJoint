@@ -8,7 +8,7 @@ type PizzaAction =
   | { type: "TOGGLE_TOPPING"; payload: string }
   | { type: "RESET" };
 
-const initialPizza: PizzaState = {
+export const initialPizza: PizzaState = {
   base: "",
   toppings: []
 };

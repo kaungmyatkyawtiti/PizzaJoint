@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Base from './pages/Base'
 import Toppings from './pages/Toppings'
 import Order from './pages/Order'
+import Header from './pages/Header'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <>
+      <Header />
+      <RouterProvider router={router} />
+    </>
   )
 }
 

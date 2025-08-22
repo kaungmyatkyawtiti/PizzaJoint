@@ -1,7 +1,7 @@
 export default function PizzaLogo() {
   return (
     <svg
-      className="w-[80px] overflow-visible stroke-white stroke-3"
+      className="w-[90px] overflow-visible stroke-white/70 stroke-3"
       style={{ strokeLinejoin: "round", strokeLinecap: "round" }}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100">
