@@ -1,5 +1,25 @@
+@import "tailwindcss";
+
 :root {
-  font-family: 'JetBrainsMono Nerd Font', monospace;
+  font-family: 'JetBrainsMono Nerd Font Mono', monospace;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: rgb(100, 0, 123);
+  background: radial-gradient(circle, rgba(100, 0, 123, 1) 0%, rgba(62, 20, 86, 1) 100%);
+  overflow: hidden;
+}
+
+button {
+  color: white;
+  padding: 10px 30px;
+  font-size: 1.3em;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid white;
+  margin: 40px auto 0;
+  cursor: pointer;
+  opacity: 0.7;
 }
