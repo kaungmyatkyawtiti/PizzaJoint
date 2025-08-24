@@ -1,12 +1,12 @@
-import { useReducer } from 'react';
-import pizzaReducer, { initialPizza } from '../hooks/pizzaReducer';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { PizzaContext } from '../hooks/PizzaContext';
 
 export default function Toppings() {
   const toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
-  const [state, dispatch] = useReducer(pizzaReducer, initialPizza);
+  const { state, dispatch } = useContext(PizzaContext);
 
   const handleToggleTopping = (topping: string) => {
     console.log("handleAddBase");

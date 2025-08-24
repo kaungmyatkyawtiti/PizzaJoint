@@ -1,12 +1,12 @@
-import { useReducer } from 'react';
-import pizzaReducer, { initialPizza } from '../hooks/pizzaReducer';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { PizzaContext } from '../hooks/PizzaContext';
 
 export default function Base() {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
-  const [state, dispatch] = useReducer(pizzaReducer, initialPizza);
+  const { state, dispatch } = useContext(PizzaContext);
 
   const handleAddBase = (base: string) => {
     console.log("handleAddBase");

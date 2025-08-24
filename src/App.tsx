@@ -4,6 +4,7 @@ import Base from './pages/Base'
 import Toppings from './pages/Toppings'
 import Order from './pages/Order'
 import Header from './pages/Header'
+import PizzaProvider from './hooks/PizzaProvider'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,9 @@ function App() {
   return (
     <>
       <Header />
-      <RouterProvider router={router} />
+      <PizzaProvider>
+        <RouterProvider router={router} />
+      </PizzaProvider>
     </>
   )
 }

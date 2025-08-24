@@ -1,9 +1,9 @@
-type PizzaState = {
+export type PizzaState = {
   base: string;
   toppings: string[];
 };
 
-type PizzaAction =
+export type PizzaAction =
   | { type: "SET_BASE"; payload: string }
   | { type: "TOGGLE_TOPPING"; payload: string }
   | { type: "RESET" };
