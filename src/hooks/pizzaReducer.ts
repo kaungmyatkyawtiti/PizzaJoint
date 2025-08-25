@@ -26,18 +26,29 @@ export default function pizzaReducer(
       };
     }
     case "TOGGLE_TOPPING": {
-      if (state.toppings.includes(action.payload)) {
-        return {
-          ...state,
-          toppings: state.toppings.filter(t => t !== action.payload),
-        };
-      }
+      // if (state.toppings.includes(action.payload)) {
+      //   return {
+      //     ...state,
+      //     toppings: state.toppings.filter(t => t !== action.payload),
+      //   };
+      // }
+      // return {
+      //   ...state,
+      //   toppings: [
+      //     ...state.toppings,
+      //     action.payload
+      //   ],
+      // };
+
+      const exists = state.toppings.includes(action.payload);
+
+      const newToppings = exists
+        ? state.toppings.filter(t => t !== action.payload) // remove
+        : [action.payload, ...state.toppings];             // add
+
       return {
         ...state,
-        toppings: [
-          ...state.toppings,
-          action.payload
-        ],
+        toppings: newToppings
       };
     }
     case "RESET": {
